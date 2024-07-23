@@ -1,0 +1,183 @@
+@import './styles/tailwind.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Rubik', cursive;
+}
+
+:root {
+    --dark: #160E33;
+    --red: #EF443B;
+    --Ash: #E0E0E0;
+    --white: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* Example size for h1 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 2rem;
+    /* Example size for h2 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
+
+h3 {
+    font-size: 1.5rem;
+    /* Example size for h3 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
+
+h4 {
+    font-size: 1.2rem;
+    /* Example size for h4 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
+
+h5 {
+    font-size: 1rem;
+    /* Example size for h5 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
+
+h6 {
+    font-size: 0.8rem;
+    /* Example size for h6 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.background {
+    background: url('./assests/images/bg.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.effect {
+    background: url('./assests/images/effect.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 100px);
+
+}
+
+.img_bg {
+    background: url('./assests/images/img_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional: Make height responsive */
+@media (min-width: 768px) {
+    .img_bg {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .img_bg {
+        height: 500px;
+    }
+}
+
+
+
+
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.menu-open {
+    animation: slideDown 0.3s ease-out;
+}
+
+.menu-close {
+    animation: slideDown 0.3s ease-out reverse;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
